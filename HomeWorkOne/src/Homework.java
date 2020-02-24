@@ -29,9 +29,14 @@ public class Homework {
      * @param b - the input parameter of double type
      * @param c - the input parameter of double type
      * @param d - the input parameter of double type
+     * @return result of performing an arithmetic operation a * (b + (c / d))
      */
     public double calculateExpression(double a, double b, double c, double d) {
-        return a * (b + (c / d));
+        double result = 0;
+        if (d != 0) {
+            result = a * (b + (c / d));
+        }
+        return result;
     }
 
     /**
