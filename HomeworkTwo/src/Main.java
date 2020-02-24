@@ -61,7 +61,7 @@ public class Main {
         nameArray = "Output array";
         UserArray.printArray(nameArray, array);
         UserArray.minMaxValues(array);
-        System.out.println("The output array has a balance: "+ UserArray.isCheckBalance(array));
+        System.out.println("The output array has a balance: "+ UserArray.isCheckBalancePlus(array));
     }
 
     private static void taskFour() {

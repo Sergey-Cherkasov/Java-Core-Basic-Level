@@ -210,4 +210,15 @@ public class UserArray {
         return array;
     }
 
+    /**
+     * The method returns true if there is a place in the array where the sum of
+     * the left and right parts of the array are equal.
+     * @param array Integer array
+     * @return true or false
+     */
+    public static boolean isCheckBalancePlus(int[] array){
+        int sum = 0;
+        for(int arrayElement : array) sum += arrayElement;
+        return sum % 2 == 0;
+    }
 }
