@@ -54,7 +54,11 @@ public class TicTacToeGame {
 
     public static void computerMove() {
         int[] move;
-        move = computer.getMove(area.getSizeArea(),area.getTicTacToeArea(),area.getEmptyFieldArea());
+        move = computer.getMove(area.getSizeArea(),
+                                area.getTicTacToeArea(),
+                                area.getEmptyFieldArea(),
+                                area.getChipsToWin(),
+                                player.getChipX());
         area.setMove(move[TicTacToeGameHandler.FIRST_ELEMENT], move[TicTacToeGameHandler.SECOND_ELEMENT], computer.getChipO());
         printAreaHeader();
         printArea();
