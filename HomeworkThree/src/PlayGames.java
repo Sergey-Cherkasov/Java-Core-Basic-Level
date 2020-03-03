@@ -9,10 +9,10 @@ public class PlayGames {
 
     public static void main(String[] args) throws IOException {
         reader = new BufferedReader(streamReader);
-        while (true){
+        while (true) {
             getMenu();
             int acceptItemMenu = Integer.parseInt(reader.readLine());
-            switch (acceptItemMenu){
+            switch (acceptItemMenu) {
                 case 1:
                     // Угадай число
                     guessNumber();
@@ -29,15 +29,15 @@ public class PlayGames {
         }
     }
 
-    static void getMenu(){
+    static void getMenu() {
         System.out.println("Меню:");
-        System.out.println( "1. Игра \"Угадай число\".\n" +
+        System.out.println("1. Игра \"Угадай число\".\n" +
                 "2. Игра \"Переведи слово\".\n" +
                 "0. Выход");
         System.out.print("Выберите игру [1-2]: ");
     }
 
-    static void guessNumber() throws IOException{
+    static void guessNumber() throws IOException {
         System.out.println("У Вас будет 5 попыток отгадать загаданное число от 0 до 100");
         reader = new BufferedReader(streamReader);
         GuessNumber game = new GuessNumber();
@@ -45,7 +45,7 @@ public class PlayGames {
         int hiddenNumber = game.getHiddenNumber();
         int userAnswerInt;
         int iteratorRound = 1;
-        while (iteratorRound <= 5){
+        while (iteratorRound <= 5) {
             System.out.println("Попытка " + iteratorRound + ": ");
             System.out.println("Введите Ваше число: ");
             userAnswerInt = Integer.parseInt(reader.readLine());
@@ -59,8 +59,6 @@ public class PlayGames {
     }
 
     static void guessFruitsVegetables() throws IOException {
-//        streamReader.mark(0);
-//        streamReader.reset();
         reader = new BufferedReader(streamReader);
         GuessFruitsVegetables guessFruitsVegetables = new GuessFruitsVegetables();
         guessFruitsVegetables.setPosition();
@@ -80,15 +78,12 @@ public class PlayGames {
         System.out.println("Игра закончена.");
     }
 
-   static void pressEnterKeyToContinue()
-    {
+    static void pressEnterKeyToContinue() {
         System.out.println("Для продолжения нажмите Enter...");
-        try
-        {
+        try {
             System.in.read();
+        } catch (Exception e) {
         }
-        catch(Exception e)
-        {}
     }
 
 }

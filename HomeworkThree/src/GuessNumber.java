@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class GuessNumber implements WinnerLoose{
+public class GuessNumber implements WinnerLoose {
 
     private int hiddenNumber;
 

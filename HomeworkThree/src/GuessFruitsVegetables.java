@@ -2,14 +2,14 @@ import org.jetbrains.annotations.NotNull;
 
 public class GuessFruitsVegetables implements WinnerLoose {
 
-    private String[][] namesFruitVegetables = { {"apple", "яблоко"}, {"orange", "апельсин"}, {"lemon", "лимон"},
-                                                {"banana", "банан"}, {"apricot", "абрикос"}, {"avocado", "авокадо"},
-                                                {"broccoli", "брокколи"}, {"carrot", "морковь"}, {"cherry", "вишня"},
-                                                {"garlic", "чеснок"}, {"grape", "виноград"}, {"melon", "дыня"},
-                                                {"kiwi", "киви"}, {"mango", "манго"}, {"mushroom", "гриб"},
-                                                {"nut", " орех"}, {"olive", "олива"}, {"pea", "горох"},
-                                                {"peanut", "арахис"}, {"pear", "груша"}, {"pepper", "перец"},
-                                                {"pineapple", "ананас"}, {"pumpkin", "тыква"}, {"potato"," картофель"}};
+    private String[][] namesFruitVegetables = {{"apple", "яблоко"}, {"orange", "апельсин"}, {"lemon", "лимон"},
+            {"banana", "банан"}, {"apricot", "абрикос"}, {"avocado", "авокадо"},
+            {"broccoli", "брокколи"}, {"carrot", "морковь"}, {"cherry", "вишня"},
+            {"garlic", "чеснок"}, {"grape", "виноград"}, {"melon", "дыня"},
+            {"kiwi", "киви"}, {"mango", "манго"}, {"mushroom", "гриб"},
+            {"nut", " орех"}, {"olive", "олива"}, {"pea", "горох"},
+            {"peanut", "арахис"}, {"pear", "груша"}, {"pepper", "перец"},
+            {"pineapple", "ананас"}, {"pumpkin", "тыква"}, {"potato", " картофель"}};
 
     private static final int MAX_WORD_LENGTH = 10;
     private int position;
@@ -30,8 +30,8 @@ public class GuessFruitsVegetables implements WinnerLoose {
     @Override
     public void loose(@NotNull String hiddenWord, @NotNull String userAnswer) {
         StringBuilder builder = new StringBuilder();
-        for (int charPosition = 0; charPosition < hiddenWord.length() & charPosition < userAnswer.length(); charPosition++){
-            if (userAnswer.charAt(charPosition) == hiddenWord.charAt(charPosition)){
+        for (int charPosition = 0; charPosition < hiddenWord.length() & charPosition < userAnswer.length(); charPosition++) {
+            if (userAnswer.charAt(charPosition) == hiddenWord.charAt(charPosition)) {
                 builder.append(hiddenWord.charAt(charPosition));
             } else {
                 builder.append('#');
