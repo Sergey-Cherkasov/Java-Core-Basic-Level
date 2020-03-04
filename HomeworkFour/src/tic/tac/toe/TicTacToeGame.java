@@ -16,28 +16,28 @@ public class TicTacToeGame {
         printArea();
         do {
             playerMove();
-            if (TicTacToeGameHandler.checkWin(  area.getTicTacToeArea(),
-                                                area.getChipsToWin(),
-                                                player.getChipX())) {
+            if (TicTacToeGameHandler.checkWin(area.getTicTacToeArea(),
+                    area.getChipsToWin(),
+                    player.getChipX())) {
                 System.out.println("Вы победили!");
                 return;
             }
             if (TicTacToeGameHandler.isAreaFull(area.getTicTacToeArea(),
-                                                area.getSizeArea(),
-                                                area.getEmptyFieldArea())) {
+                    area.getSizeArea(),
+                    area.getEmptyFieldArea())) {
                 System.out.println("Ничья");
                 return;
             }
             computerMove();
-            if (TicTacToeGameHandler.checkWin(  area.getTicTacToeArea(),
-                                                area.getChipsToWin(),
-                                                computer.getChipO())) {
+            if (TicTacToeGameHandler.checkWin(area.getTicTacToeArea(),
+                    area.getChipsToWin(),
+                    computer.getChipO())) {
                 System.out.println("Победил компьютер");
                 return;
             }
             if (TicTacToeGameHandler.isAreaFull(area.getTicTacToeArea(),
-                                                area.getSizeArea(),
-                                                area.getEmptyFieldArea())) {
+                    area.getSizeArea(),
+                    area.getEmptyFieldArea())) {
                 System.out.println("Ничья");
                 return;
             }
@@ -46,7 +46,7 @@ public class TicTacToeGame {
 
     public static void playerMove() {
         int[] move;
-        move = player.getMove(area.getSizeArea(),area.getTicTacToeArea(),area.getEmptyFieldArea());
+        move = player.getMove(area.getSizeArea(), area.getTicTacToeArea(), area.getEmptyFieldArea());
         area.setMove(move[TicTacToeGameHandler.FIRST_ELEMENT], move[TicTacToeGameHandler.SECOND_ELEMENT], player.getChipX());
         printAreaHeader();
         printArea();
@@ -55,10 +55,10 @@ public class TicTacToeGame {
     public static void computerMove() {
         int[] move;
         move = computer.getMove(area.getSizeArea(),
-                                area.getTicTacToeArea(),
-                                area.getEmptyFieldArea(),
-                                area.getChipsToWin(),
-                                player.getChipX());
+                area.getTicTacToeArea(),
+                area.getEmptyFieldArea(),
+                area.getChipsToWin(),
+                player.getChipX());
         area.setMove(move[TicTacToeGameHandler.FIRST_ELEMENT], move[TicTacToeGameHandler.SECOND_ELEMENT], computer.getChipO());
         printAreaHeader();
         printArea();

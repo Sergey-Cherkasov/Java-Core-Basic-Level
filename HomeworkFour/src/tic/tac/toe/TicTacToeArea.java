@@ -12,7 +12,7 @@ public class TicTacToeArea {
         this.ticTacToeArea = new char[SIZE_AREA][SIZE_AREA];
     }
 
-    public TicTacToeArea(int sizeArea){
+    public TicTacToeArea(int sizeArea) {
         this.ticTacToeArea = new char[sizeArea][sizeArea];
     }
 

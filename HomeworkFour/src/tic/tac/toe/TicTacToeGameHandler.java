@@ -15,7 +15,7 @@ public class TicTacToeGameHandler {
 
     public static boolean checkWin(char[][] ticTacToeArea, int chipsToWin, char chip) {
         return (isRowWin(ticTacToeArea, chipsToWin, chip) || isColumnWin(ticTacToeArea, chipsToWin, chip) ||
-            isLeftDiagonalWin(ticTacToeArea, chipsToWin, chip) || isRightDiagonalWin(ticTacToeArea, chipsToWin, chip));
+                isLeftDiagonalWin(ticTacToeArea, chipsToWin, chip) || isRightDiagonalWin(ticTacToeArea, chipsToWin, chip));
     }
 
     private static boolean isLeftDiagonalWin(char[][] ticTacToeArea, int chipsToWin, char chip) {
@@ -24,7 +24,7 @@ public class TicTacToeGameHandler {
         int numberLastElement = ticTacToeArea.length - 1;                  // Номер последнего элемента в массиве
 
         for (int rowFail = startPositionToFail; rowFail <= countCycleIteration * 2; rowFail++) {
-            if((ticTacToeArea[rowFail][rowFail] != chip) |
+            if ((ticTacToeArea[rowFail][rowFail] != chip) |
                     (ticTacToeArea[numberLastElement - rowFail][numberLastElement - rowFail] != chip)) {
                 break;
             }
@@ -43,7 +43,7 @@ public class TicTacToeGameHandler {
         int numberLastElement = ticTacToeArea.length - 1;                  // Номер последнего элемента в массиве
 
         for (int rowFail = startPositionToFail; rowFail <= countCycleIteration * 2; rowFail++) {
-            if((ticTacToeArea[rowFail][numberLastElement - rowFail] != chip) |
+            if ((ticTacToeArea[rowFail][numberLastElement - rowFail] != chip) |
                     (ticTacToeArea[numberLastElement - rowFail][rowFail] != chip)) {
                 break;
             }
@@ -61,7 +61,7 @@ public class TicTacToeGameHandler {
         int startPositionToFail = ticTacToeArea.length / chipsToWin; // Количество итераций цикла
         int countCycleIteration = ticTacToeArea.length % chipsToWin;       // Начальная позиция проверки выигрыша
         int numberLastElement = ticTacToeArea.length - 1;                  // Номер последнего элемента в массиве
-        for (int column = 0; column < ticTacToeArea.length; column ++) {
+        for (int column = 0; column < ticTacToeArea.length; column++) {
             for (int rowFail = startPositionToFail; rowFail <= startPositionToFail * 2; rowFail++) {
                 if ((ticTacToeArea[rowFail][column] != chip) |
                         (ticTacToeArea[numberLastElement - rowFail][column] != chip)) {
@@ -82,7 +82,7 @@ public class TicTacToeGameHandler {
         int startPositionToFail = ticTacToeArea.length / chipsToWin; // Начальная позиция проверки выигрыша
         int countCycleIteration = ticTacToeArea.length % chipsToWin;       // Количество итераций цикла
         int numberLastElement = ticTacToeArea.length - 1;                  // Номер последнего элемента в массиве
-        for (int row = 0; row < ticTacToeArea.length; row ++) {
+        for (int row = 0; row < ticTacToeArea.length; row++) {
             for (int columnFail = startPositionToFail; columnFail <= startPositionToFail * 2; columnFail++) {
                 if ((ticTacToeArea[row][columnFail] != chip) ||
                         (ticTacToeArea[row][numberLastElement - columnFail] != chip)) {
@@ -103,10 +103,7 @@ public class TicTacToeGameHandler {
         if ((row < 1 || row > sizeArea) || (column < 1 || column > sizeArea)) {
             return false;
         }
-        if (ticTacToeArea[row - 1][column - 1] != emptyFieldArea) {
-            return false;
-        }
-        return true;
+        return ticTacToeArea[row - 1][column - 1] == emptyFieldArea;
     }
 
     public static boolean isAreaFull(char[][] area, int sizeArea, char emptyFieldArea) {
