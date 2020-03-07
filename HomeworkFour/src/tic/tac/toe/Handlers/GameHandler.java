@@ -1,6 +1,11 @@
-package tic.tac.toe;
+package tic.tac.toe.Handlers;
 
-public class TicTacToeGameHandler {
+/**
+ * Класс GameHandler обеспечивает логу игры.
+ * Проверяет на выигрыш/проигрыш/ничью по строке, солбцу, левой и правой диагоналей.
+ * Проверяет валидность хода.
+ */
+public class GameHandler {
 
     public static final int FIRST_ELEMENT = 0;
     public static final int SECOND_ELEMENT = 1;
@@ -16,6 +21,23 @@ public class TicTacToeGameHandler {
     public static boolean checkWin(char[][] ticTacToeArea, int chipsToWin, char chip) {
         return (isRowWin(ticTacToeArea, chipsToWin, chip) || isColumnWin(ticTacToeArea, chipsToWin, chip) ||
                 isLeftDiagonalWin(ticTacToeArea, chipsToWin, chip) || isRightDiagonalWin(ticTacToeArea, chipsToWin, chip));
+    }
+
+    public static boolean isCellValid(int[] move, char[][] ticTacToeArea, int sizeArea, char emptyFieldArea) {
+        int row = move[0], column = move[1];
+        if ((row < 1 || row > sizeArea) || (column < 1 || column > sizeArea)) {
+            return false;
+        }
+        return ticTacToeArea[row - 1][column - 1] == emptyFieldArea;
+    }
+
+    public static boolean isAreaFull(char[][] area, int sizeArea, char emptyFieldArea) {
+        for (int i = 0; i < sizeArea; i++) {
+            for (int j = 0; j < sizeArea; j++) {
+                if (area[i][j] == emptyFieldArea) return false;
+            }
+        }
+        return true;
     }
 
     private static boolean isLeftDiagonalWin(char[][] ticTacToeArea, int chipsToWin, char chip) {
@@ -96,23 +118,6 @@ public class TicTacToeGameHandler {
             }
         }
         return false;
-    }
-
-    public static boolean isCellValid(int[] move, char[][] ticTacToeArea, int sizeArea, char emptyFieldArea) {
-        int row = move[0], column = move[1];
-        if ((row < 1 || row > sizeArea) || (column < 1 || column > sizeArea)) {
-            return false;
-        }
-        return ticTacToeArea[row - 1][column - 1] == emptyFieldArea;
-    }
-
-    public static boolean isAreaFull(char[][] area, int sizeArea, char emptyFieldArea) {
-        for (int i = 0; i < sizeArea; i++) {
-            for (int j = 0; j < sizeArea; j++) {
-                if (area[i][j] == emptyFieldArea) return false;
-            }
-        }
-        return true;
     }
 
 }

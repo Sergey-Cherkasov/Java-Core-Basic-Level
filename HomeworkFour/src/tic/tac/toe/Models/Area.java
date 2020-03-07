@@ -1,18 +1,18 @@
-package tic.tac.toe;
+package tic.tac.toe.Models;
 
 import java.util.Arrays;
 
-public class TicTacToeArea {
+public class Area {
     private char[][] ticTacToeArea;
     private static final int SIZE_AREA = 5;
     private static final int CHIPS_TO_WIN = 4;
     private static final char EMPTY_FIELD_AREA = '\u25FE';
 
-    public TicTacToeArea() {
+    public Area() {
         this.ticTacToeArea = new char[SIZE_AREA][SIZE_AREA];
     }
 
-    public TicTacToeArea(int sizeArea) {
+    public Area(int sizeArea) {
         this.ticTacToeArea = new char[sizeArea][sizeArea];
     }
 
@@ -36,7 +36,7 @@ public class TicTacToeArea {
         return ticTacToeArea[row][column];
     }
 
-    public void initNewArea() {
+    public void setNewArea() {
         for (char[] rows : ticTacToeArea) {
             Arrays.fill(rows, EMPTY_FIELD_AREA);
         }
