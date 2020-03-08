@@ -26,6 +26,13 @@ public class Employee {
       + "Position: " + position + "\tSalary: " + salary);
    }
 
+   @Override
+   public String toString(){
+     return "Name: " + lastName + "\t" + firstName + "\t" + patronymic + "\n"
+              + "Age: " + age + "\n" + "Phone number: " + phone + "\tEmail: " + eMail + "\n"
+              + "Position: " + position + "\tSalary: " + salary;
+   }
+
    public int getAge() {
       return age;
    }
