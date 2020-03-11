@@ -8,7 +8,7 @@ public class Cat extends Animals {
    }
 
    @Override
-   public void run(int lengthObstacle) {
+   public void onRun(int lengthObstacle) {
       if (lengthObstacle > 500){
          System.out.println(name + " не сможет пробежать " + lengthObstacle + " м.");
       } else {
@@ -17,8 +17,16 @@ public class Cat extends Animals {
    }
 
    @Override
-   public void swim(int lengthObstacle) {
+   public void onSwim(int lengthObstacle) {
       System.out.println("Кот не умеет плавать!");
    }
 
+   @Override
+   public void onJump(double highObstacle) {
+      if (highObstacle > 2){
+         System.out.println(name + " не сможет прыгнуть на высоту " + highObstacle + " м.");
+      } else {
+         System.out.println(name + " выпрыгнул на высоту " + highObstacle + " м.");
+      }
+   }
 }
