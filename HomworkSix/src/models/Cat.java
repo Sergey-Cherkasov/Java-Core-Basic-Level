@@ -3,8 +3,7 @@ package models;
 public class Cat extends Animals {
 
    public Cat(String name) {
-      super();
-      this.name = name;
+      super(name);
    }
 
    @Override

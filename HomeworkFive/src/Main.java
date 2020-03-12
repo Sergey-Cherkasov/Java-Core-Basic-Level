@@ -17,7 +17,8 @@ public class Main {
 
       for (Employee employee : employees) {
          if (employee.getAge() > 40) {
-            employee.printEmployeeInfo();
+            System.out.println(employee);
+//            employee.printEmployeeInfo();  // Второй вариант вывода в консоль
             System.out.println();
          }
       }

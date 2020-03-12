@@ -11,6 +11,10 @@ public abstract class Animals {
    protected final int MAX_DISTANCE_RUN_CAT = 200;
    protected final double MAX_HEIGHT_JUMP_CAT = 10;
 
+   public Animals(String name) {
+      this.name = name;
+   }
+
    public abstract void onRun(int lengthDistance);
 
    public abstract void onSwim(int lengthDistance);
