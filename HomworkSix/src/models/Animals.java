@@ -5,11 +5,17 @@ public abstract class Animals {
    protected String name;
    protected int count;
 
-   public abstract void onRun(int lengthObstacle);
+   protected final int MAX_DISTANCE_RUN_DOG = 500;
+   protected final int MAX_DISTANCE_SWIM_DOG = 10;
+   protected final double MAX_HEIGHT_JUMP_DOG = 0.5;
+   protected final int MAX_DISTANCE_RUN_CAT = 200;
+   protected final double MAX_HEIGHT_JUMP_CAT = 10;
 
-   public abstract void onSwim(int lengthObstacle);
+   public abstract void onRun(int lengthDistance);
 
-   public abstract void onJump(double highObstacle);
+   public abstract void onSwim(int lengthDistance);
+
+   public abstract void onJump(double heightObstacle);
 
    public void getCount(){
       System.out.println(count);

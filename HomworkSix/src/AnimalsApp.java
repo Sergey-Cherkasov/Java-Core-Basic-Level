@@ -23,11 +23,11 @@ public class AnimalsApp {
       }
       System.out.println("Количество собак: " + countDog + ".\nКоличество котов: "+ countCat +".\n");
 
-      animals[0].run(200);
-      animals[3].swim(200);
-      animals[1].run(500);
-      animals[2].run(501);
-      animals[4].swim(10);
+      animals[0].onRun(200);
+      animals[3].onSwim(200);
+      animals[1].onRun(501);
+      animals[2].onSwim(10);
+      animals[4].onJump(10);
 
    }
 }
