@@ -30,10 +30,10 @@ public class Animals {
 
    public void onJump(double heightObstacle){
       if (heightObstacle > maxHeightJump){
-         System.out.printf("не сможет прыгнуть на высоту %.2f м. Максимальная высота для прыжка: %.2f м.%n",
+         System.out.printf("не сможет прыгнуть на высоту %.2f м. Максимальная высота препятствия: %.2f м.%n",
                  heightObstacle, maxHeightJump);
       } else {
-         System.out.printf("выпрыгнул(а) на высоту на высоту %.2f м. Максимальная высота для прыжка: %.2f м.%n",
+         System.out.printf("выпрыгнул(а) на высоту %.2f м. Максимальная высота препятствия: %.2f м.%n",
                  heightObstacle, maxHeightJump);
       }
    }
