@@ -5,7 +5,7 @@ import java.util.Scanner;
  * An empty project was created in IntelliJ IDEA
  * and the main method was registered();
  */
-public class Main {
+public class HomeworkOne {
 
     private static Homework homework;
 

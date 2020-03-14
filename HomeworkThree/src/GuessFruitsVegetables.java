@@ -1,5 +1,3 @@
-import org.jetbrains.annotations.NotNull;
-
 public class GuessFruitsVegetables implements WinnerLoose {
 
     private String[][] namesFruitVegetables = {{"apple", "яблоко"}, {"orange", "апельсин"}, {"lemon", "лимон"},
@@ -28,7 +26,7 @@ public class GuessFruitsVegetables implements WinnerLoose {
     }
 
     @Override
-    public void loose(@NotNull String hiddenWord, @NotNull String userAnswer) {
+    public void loose(String hiddenWord, String userAnswer) {
         StringBuilder builder = new StringBuilder();
         for (int charPosition = 0; charPosition < hiddenWord.length() & charPosition < userAnswer.length(); charPosition++) {
             if (userAnswer.charAt(charPosition) == hiddenWord.charAt(charPosition)) {
