@@ -1,6 +1,6 @@
-package tic.tac.toe.Models;
+package tic.tac.toe.models;
 
-import tic.tac.toe.Handlers.ComputerHandler;
+import tic.tac.toe.handlers.ComputerHandler;
 
 public class Computer {
     private static final char CHIP_O = '\u24B8';

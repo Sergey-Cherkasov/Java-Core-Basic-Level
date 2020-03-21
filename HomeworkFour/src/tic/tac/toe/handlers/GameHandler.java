@@ -1,4 +1,4 @@
-package tic.tac.toe.Handlers;
+package tic.tac.toe.handlers;
 
 /**
  * Класс GameHandler обеспечивает логу игры.

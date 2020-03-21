@@ -1,4 +1,4 @@
-package tic.tac.toe.Models;
+package tic.tac.toe.models;
 
 import java.util.Arrays;
 

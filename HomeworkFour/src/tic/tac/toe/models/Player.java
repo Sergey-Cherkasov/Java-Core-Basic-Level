@@ -1,6 +1,6 @@
-package tic.tac.toe.Models;
+package tic.tac.toe.models;
 
-import tic.tac.toe.Handlers.PlayerHandler;
+import tic.tac.toe.handlers.PlayerHandler;
 
 public class Player {
 
